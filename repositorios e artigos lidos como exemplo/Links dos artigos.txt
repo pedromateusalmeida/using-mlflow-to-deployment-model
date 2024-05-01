@@ -1,0 +1,18 @@
+https://www.artefact.com/blog/serving-ml-models-at-scale-using-mlflow-on-kubernetes-part-1/
+https://www.artefact.com/blog/serving-ml-models-at-scale-using-mlflow-on-kubernetes-part-2/
+https://www.artefact.com/blog/serving-ml-models-at-scale-using-mlflow-on-kubernetes-part-2-2/
+
+https://heartbeat.comet.ml/scaling-machine-learning-models-with-kubernetes-and-google-cloud-platform-369e86fff8cb
+https://heartbeat.comet.ml/scaling-machine-learning-models-with-kubernetes-and-google-cloud-platform-part-2-c83c3beb7fd7
+https://heartbeat.comet.ml/scaling-machine-learning-models-with-kubernetes-and-google-cloud-platform-part-3-bba72ea41e69
+
+https://nagakedari.medium.com/mlflow-on-cloud-3bcd07f496cf
+https://medium.com/@andrevargas22/how-to-launch-an-mlflow-server-with-continuous-deployment-on-gcp-in-minutes-7d3a29feff88
+https://aahansingh.com/mlflow-on-kubernetes#heading-secrets
+
+https://dounpct.medium.com/mlflow-with-helm-and-serve-train-model-on-kubernetes-c835139c4237
+https://dounpct.medium.com/argocd-argocd-vault-plugin-20d28f03316c
+https://dounpct.medium.com/create-gke-cluster-with-terraform-633afbac1c66
+
+Bom conteúdo de como dar deploy de containers, porém desatualizado
+https://colinwilson.uk/2020/07/09/using-google-container-registry-with-kubernetes/#step-1---enable-the-container-registry-api
