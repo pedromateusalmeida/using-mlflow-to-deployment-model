@@ -9,4 +9,4 @@ Infra <br>
 •	Inserir a chave a ser utilizada pelo servidor do MLflow dentro do cluster do kubernetes.  <br>
  <br>
 Exemplo 2 <br>
- ![exemplo 2](https://github.com/pedromateusalmeida/using-mlflow-to-deployment-model/blob/main/servidor_mlflow_gcp/servidor_infra.png](https://github.com/pedromateusalmeida/using-mlflow-to-deployment-model/blob/main/servidor_mlflow_gcp/servidor_infra_funcionamento.png)
+ ![exemplo 2](https://github.com/pedromateusalmeida/using-mlflow-to-deployment-model/blob/main/servidor_mlflow_gcp/servidor_infra_funcionamento.png)
