@@ -1,4 +1,4 @@
-![Infra servidor MLflow]([URL_da_imagem](https://github.com/pedromateusalmeida/using-mlflow-to-deployment-model/blob/main/servidor_mlflow_gcp/servidor_infra.png)
+![Infra servidor MLflow]([URL_da_imagem](https://github.com/pedromateusalmeida/using-mlflow-to-deployment-model/blob/main/servidor_mlflow_gcp/servidor_infra.png )
  <br>
 Infra <br>
 •	Criar um bucket no armazenamento em nuvem que será usado como armazenamento de artefatos <br>
@@ -9,4 +9,4 @@ Infra <br>
 •	Inserir a chave a ser utilizada pelo servidor do MLflow dentro do cluster do kubernetes.  <br>
  <br>
 Exemplo 2
- ![exemplo 2]([URL_da_imagem]([https://github.com/pedromateusalmeida/using-mlflow-to-deployment-model/blob/main/servidor_mlflow_gcp/servidor_infra.png](https://github.com/pedromateusalmeida/using-mlflow-to-deployment-model/blob/main/servidor_mlflow_gcp/servidor_infra_funcionamento.png))
+ ![exemplo 2]([URL_da_imagem]([https://github.com/pedromateusalmeida/using-mlflow-to-deployment-model/blob/main/servidor_mlflow_gcp/servidor_infra.png](https://github.com/pedromateusalmeida/using-mlflow-to-deployment-model/blob/main/servidor_mlflow_gcp/servidor_infra_funcionamento.png )
