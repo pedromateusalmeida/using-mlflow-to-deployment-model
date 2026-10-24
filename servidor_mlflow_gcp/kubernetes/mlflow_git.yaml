@@ -1,0 +1,62 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mlflow-server-deployment
+  labels:
+    app: mlflow-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mlflow-server
+  template:
+    metadata:
+      labels:
+        app: mlflow-server
+    spec:
+      containers:
+      - name: mlflow-server-container
+        image: gcr.io/[PROJECT-NAME]/mlflow:0.1
+        env:
+        - name: ARTIFACTS_STORE_URI
+          value: gs://[BUCKET-NAME]/mlruns/ # Substitua [BUCKET-NAME] pelo nome do seu bucket
+        - name: GOOGLE_APPLICATION_CREDENTIALS
+          value: /var/run/secrets/key.json
+        ports:
+        - containerPort: 5000
+        command: [mlflow]
+        args: ["server", "--host=0.0.0.0", "--default-artifact-root=gs://[BUCKET-NAME]/mlruns/", "--backend-store-uri=postgresql://[DB-USER]:[DB-PASSWORD]@[DB-HOST]:5432/[DB-NAME]", "--serve-artifacts"] # Substitua [DB-USER], [DB-PASSWORD], [DB-HOST], [DB-NAME] com suas credenciais
+        volumeMounts:
+        - name: google-cloud-key
+          mountPath: /var/run/secrets
+          readOnly: true
+      - name: cloud-sql-proxy-container
+        image: gcr.io/cloudsql-docker/gce-proxy:1.31.2
+        command: ["/cloud_sql_proxy"]
+        args: ["-instances=[PROJECT-NAME]:us-central1:mlflow-database=tcp:5432", "-credential_file=/var/run/secrets/key.json"]
+        volumeMounts:
+        - name: google-cloud-key
+          mountPath: /var/run/secrets
+          readOnly: true
+      volumes:
+      - name: google-cloud-key
+        secret:
+          secretName: gcloud-credentials
+
+---
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  name: "mlflow-server-service"
+  labels:
+    app: "mlflow-server-service"
+spec:
+  type: "LoadBalancer"
+  selector:
+    app: "mlflow-server"
+  ports:
+    - name: "http"
+      protocol: "TCP"
+      port: 8080
+      targetPort: 5000
